@@ -1,0 +1,24 @@
+# Manifest nach LayerNX App-Standard 1 (docs/app-standard.md).
+standard = 1
+
+[app]
+name = "meine-app"
+type = "web"
+python = "3.13"
+entry = "app.main:app"
+
+[run]
+workers = 2
+static = { "/static" = "app/static" }
+
+[health]
+path = "/healthz"
+
+[deploy]
+strategy = "blue-green"
+
+[data]
+dir = true
+
+[database]
+create = "sqlite"

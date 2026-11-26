@@ -1,0 +1,4 @@
+/* SPDX-License-Identifier: MIT */
+/* Eigene Ergänzungen zu lnx-ui.css; nur Variablen, keine festen Farben. */
+.app-main { max-width: 860px; margin: 0 auto; }
+.app-zahl { margin: 4px 0 14px; font-size: 2rem; font-weight: 700; color: var(--text); }

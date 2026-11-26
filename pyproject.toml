@@ -1,0 +1,31 @@
+[project]
+name = "meine-app"
+version = "0.1.0"
+description = "Vorlage python-web: FastAPI, Jinja2, HTMX und LayerNX-Design nach App-Standard 1"
+requires-python = ">=3.13"
+license = "MIT"
+dependencies = [
+    "fastapi>=0.120",
+    "uvicorn>=0.38",
+    "jinja2>=3.1.6",
+    "pymysql>=1.1",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.4",
+    "httpx>=0.28",
+    "ruff>=0.14",
+]
+
+[tool.uv]
+package = false
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+filterwarnings = ["ignore:Using `httpx` with `starlette.testclient`"]

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0b0f">
+  <meta name="htmx-config" content='{"includeIndicatorStyles": false, "allowEval": false, "allowScriptTags": false}'>
+  <title>{% block title %}meine-app{% endblock %}</title>
+  <link rel="icon" href="/static/lnx/brand/favicon.ico">
+  <link rel="stylesheet" href="/static/lnx/css/lnx-ui.css">
+  <link rel="stylesheet" href="/static/css/app.css">
+  <script src="/static/vendor/htmx.min.js" defer></script>
+  <script src="/static/js/app.js" defer></script>
+</head>
+<body class="ui">
+<header class="ui-top">
+  <a class="ui-brand" href="/"><img src="/static/lnx/brand/layernx-logo.svg" alt="LayerNX" width="84" height="28"><span>meine-app</span></a>
+</header>
+<main class="ui-content app-main">
+  {% block content %}{% endblock %}
+</main>
+</body>
+</html>
